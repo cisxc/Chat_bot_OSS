@@ -1,0 +1,20 @@
+{
+  "name": "chatbot_v3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "husky": "^3.1.0"
+  },
+  "husky":{
+	  "hooks" :{
+		  "pre-commit":"eslint . --ext .js",
+		  "pre-push":"git rev-parse --aabbrev -ref HEAD | grep -v master"
+	  }
+  }
+}
